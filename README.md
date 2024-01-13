@@ -1,2 +1,7 @@
-# dotfiles
-Configurations for Dev Environment.
+# Configurations for Dev Environment.
+
+## Tools
+
+- [alacritty](/alacritty)
+- [tmux](/tmux/)
+- lvim
