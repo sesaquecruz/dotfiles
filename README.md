@@ -1,4 +1,4 @@
-# Configurations for Dev Environment.
+# Configurations for Dev Environment
 
 ## Tools
 
