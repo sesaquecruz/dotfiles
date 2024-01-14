@@ -4,11 +4,12 @@
 
 - [alacritty](/alacritty)
 - [tmux](/tmux/)
-- lvim
+- nvim
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 
-## Others
+## Appearance
 
-- [font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized)
+- [fira code font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+- [sf mono font](https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized)
 - [starship](/starship/)
