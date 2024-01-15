@@ -4,7 +4,7 @@
 
 - [alacritty](/alacritty)
 - [tmux](/tmux/)
-- nvim
+- [nvim](/nvim/)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [lazydocker](https://github.com/jesseduffield/lazydocker)
 
