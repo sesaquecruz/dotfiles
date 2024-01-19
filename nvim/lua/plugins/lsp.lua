@@ -11,7 +11,7 @@ return {
 		lazy = false,
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "gopls" },
+				ensure_installed = { "lua_ls", "gopls", "rust_analyzer" },
 			})
 		end,
 	},
@@ -43,7 +43,7 @@ return {
 	},
 	{
 		"nvimtools/none-ls.nvim",
-		lazy = false,
+		ft = { "lua", "go" },
 		config = function()
 			local null_ls = require("null-ls")
 			null_ls.setup({
@@ -52,26 +52,30 @@ return {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.gofumpt,
 					null_ls.builtins.formatting.goimports_reviser,
-    				null_ls.builtins.formatting.golines,
 				},
 			})
 		end,
 	},
 	{
-		"olexsmir/gopher.nvim",
-		requires = {
-    		"nvim-lua/plenary.nvim",
-  		},
+		"rust-lang/rust.vim",
+		ft = { "rust" },
+		init = function()
+			vim.g.rustfmt_autosave = 1
+		end,
+	},
+	{
+		"saecki/crates.nvim",
+		tag = 'stable',
+		dependencies = { 
+			"nvim-lua/plenary.nvim",
+		},
+		ft = { "toml" },
 		config = function()
-			require("gopher").setup({
-				commands = {
-					go = "go",
-					gomodifytags = "gomodifytags",
-					gotests = "gotests",
-					impl = "impl",
-					iferr = "iferr",
-				},
-			})
-		end
-	}
+			local crates = require('crates')
+			crates.setup({})
+			crates.show()
+			crates.show_versions_popup()
+			crates.show_features_popup()
+		end,
+	},
 }

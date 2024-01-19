@@ -4,6 +4,11 @@
 vim.keymap.set("n", "<leader>vh", ":split<CR>", {})
 vim.keymap.set("n", "<leader>vv", ":vsplit<CR>", {})
 
+vim.keymap.set("n", "<leader>mh", "<C-w>h", {})
+vim.keymap.set("n", "<leader>mj", "<C-w>j", {})
+vim.keymap.set("n", "<leader>mk", "<C-w>k", {})
+vim.keymap.set("n", "<leader>ml", "<C-w>l", {})
+
 -- Buffers
 vim.keymap.set("n", "<leader>qq", ":bd<CR>", {})
 vim.keymap.set("n", "<leader>qi", ":bd!<CR>", {})
@@ -25,7 +30,6 @@ vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>lc", vim.lsp.buf.code_action, {})
-
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {})
 
 -- On Snippet Doc Visualization
@@ -36,6 +40,6 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {})
 local dap = require("dap")
 vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
 vim.keymap.set("n", "<leader>dc", dap.continue, {})
-vim.keymap.set("n", "<leader>dl", dap.step_over, {})
+vim.keymap.set("n", "<leader>dn", dap.step_over, {})
 vim.keymap.set("n", "<leader>di", dap.step_into, {})
 vim.keymap.set("n", "<leader>do", dap.step_out, {})

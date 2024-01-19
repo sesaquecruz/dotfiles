@@ -1,21 +1,9 @@
 return {
   "hrsh7th/nvim-cmp",
-  dependencies = {
-    "rafamadriz/friendly-snippets",
-    "L3MON4D3/LuaSnip",
-    "saadparwaiz1/cmp_luasnip",
-  },
   lazy = false,
   config = function()
-    require("luasnip.loaders.from_vscode").load({})
-
     local cmp = require("cmp")
     cmp.setup({
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
       window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
@@ -26,10 +14,10 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp" },
-        { name = "luasnip" },
-      }, {
+        { name = "path" },
         { name = "buffer" },
+        { name = "nvim_lsp" },
+        { name = "crates" },
       }),
     })
   end,
