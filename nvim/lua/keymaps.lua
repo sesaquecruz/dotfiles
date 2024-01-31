@@ -43,3 +43,9 @@ vim.keymap.set("n", "<leader>dc", dap.continue, {})
 vim.keymap.set("n", "<leader>dn", dap.step_over, {})
 vim.keymap.set("n", "<leader>di", dap.step_into, {})
 vim.keymap.set("n", "<leader>do", dap.step_out, {})
+
+-- Git
+vim.keymap.set("n", "<leader>gh", ":Gitsigns preview_hunk<CR>", {})
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", {})
+
